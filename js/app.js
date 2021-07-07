@@ -1,5 +1,6 @@
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav__bottom");
+const navLink = document.querySelectorAll(".nav__link");
 
 // form
 const form = document.getElementById("contact");
@@ -18,6 +19,17 @@ const btnImg = document.querySelectorAll(".btn--img");
 function toggleNav() {
   hamburger.addEventListener("click", () => {
     nav.classList.toggle("nav__bottom--toggle");
+  });
+}
+
+function activeLink() {
+  navLink.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      navLink.forEach(function (l) {
+        l.classList.remove("active");
+      });
+      e.target.classList.add("active");
+    });
   });
 }
 
@@ -87,6 +99,7 @@ function disableScroll() {
 
 document.addEventListener("DOMContentLoaded", function () {
   toggleNav();
+  activeLink();
   formSubmit();
   disableOverlayForm();
   disableOverlayImg();
