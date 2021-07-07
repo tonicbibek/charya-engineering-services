@@ -88,14 +88,6 @@ img {
   margin-top: 3em;
 }
 
-.btn a {
-  text-decoration: none;
-  color: var(--clr-light);
-
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
 /****************** 
     nav-bar
 *******************/
@@ -240,24 +232,14 @@ img {
 .heading {
   color: var(--clr-light);
   text-align: center;
+  margin-bottom: 3em;
 }
 
 .btn--light {
   background-color: var(--clr-light);
-}
-
-.btn--light:hover {
-  transition: var(--transition);
-}
-
-.btn--light:hover a {
-  color: var(--clr-light);
-  transition: var(--transition);
-}
-
-.btn--light a {
   font-size: 1.25rem;
   font-weight: 600;
+  padding: 0.75em 3em;
 
   text-decoration: none;
   color: var(--clr-blue);
