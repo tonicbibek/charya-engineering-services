@@ -264,7 +264,7 @@ img {
 .card:hover .card__icon {
   width: 105px;
   filter: drop-shadow(3px 30px 10px gray);
-  transition: all 0.2s ease-in;
+  transition: filter 0.2s ease-in;
 }
 
 .card + .card {
@@ -280,13 +280,13 @@ img {
 .card__title {
   font-family: var(--ff-heading);
   color: var(--clr-blue);
+  margin-bottom: 1em;
 }
 
 .card__icon {
   width: 100px;
   margin: 0 auto;
   color: var(--clr-blue);
-  margin-top: 1em;
 }
 
 .card__content {
@@ -411,7 +411,7 @@ img {
 
 .img__content {
   line-height: 1.5;
-  padding: 1em 0.75em;
+  padding: 2em;
 }
 
 .img-info img {
@@ -447,6 +447,37 @@ img {
   margin-top: 6em;
 }
 
+.form__image a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-blue);
+  width: 30%;
+  margin-bottom: 3em;
+}
+
+.telephone,
+.location,
+.facebook {
+  text-align: center;
+  height: 100%;
+  display: grid;
+}
+
+.telephone__text,
+.facebook__text,
+.location__text {
+  display: block;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.telephone i,
+.facebook i,
+.location i {
+  font-size: 2rem;
+  color: var(--clr-blue);
+}
+
 #contact {
   padding: 1.2em;
 }
@@ -467,6 +498,13 @@ textarea {
   border-bottom: 2px solid var(--clr-gray);
   font-size: 1.125em;
   font-family: var(--ff-primary);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid var(--clr-l-blue-1);
+  border-radius: 8px;
 }
 
 input::placeholder,
@@ -545,6 +583,10 @@ textarea {
   text-decoration: none;
   color: var(--clr-light);
   border-bottom: 1px solid gray;
+}
+
+.link:hover {
+  color: var(--clr-l-blue-1);
 }
 
 .link__item + .link__item {
@@ -653,13 +695,59 @@ textarea {
     contact us
   *******************/
 
+  .form__image {
+    width: 50%;
+    display: grid;
+    row-gap: 20px;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+  }
+
+  .form__image a {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .telephone,
+  .facebook,
+  .location {
+    width: 80%;
+    color: var(--clr-blue);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100px auto;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .telephone__text,
+  .facebook__text,
+  .location__text {
+    font-size: 1.25rem;
+    font-family: var(--ff-primary);
+    font-weight: 600;
+    margin-left: 2em;
+    align-self: center;
+    margin-top: 0;
+  }
+
+  .telephone i,
+  .facebook i,
+  .location i {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .telephone:hover i,
+  .facebook:hover i,
+  .location:hover i {
+    font-size: 5.2em;
+    filter: drop-shadow(10px 10px 5px gray);
+  }
+
   #contact {
     width: 55%;
     padding: 2em;
-  }
-
-  .form__image {
-    width: 40%;
   }
 
   /****************** 
