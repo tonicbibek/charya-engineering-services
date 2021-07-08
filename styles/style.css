@@ -76,6 +76,10 @@ img {
   display: flex;
 }
 
+.flex--spacing {
+  justify-content: space-between;
+}
+
 .col {
   flex-direction: column;
 }
